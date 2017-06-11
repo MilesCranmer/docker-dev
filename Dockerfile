@@ -4,7 +4,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     vim-nox-py2 \
     zsh \
     manpages-posix \
-    manpages-posix-dev
+    manpages-posix-dev \
+    locales
+
+RUN locale-gen en_US en_US.UTF-8
 
 WORKDIR /tmp
 
